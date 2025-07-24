@@ -1,5 +1,19 @@
-// @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
+import path from 'path';
 
-// https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+    vite: {
+    resolve: {
+      alias: {
+        '@layouts': path.resolve('./src/layouts'),
+        '@components': path.resolve('./src/components'),
+        '@styles': path.resolve('./src/styles'),
+        '@assets': path.resolve('./src/assets'),
+      },
+    },
+  devToolbar: {
+    enabled: false,
+  },
+  site: "https://www.mauigiftoutlet.online",
+}
+});
