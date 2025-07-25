@@ -31,9 +31,9 @@ const { description, title, preloadedImage } = Astro.props;
     <meta property="og:image:secure_url" content="/assets/images/logo-small.png" />
 
     <!--Favicons-->
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/favicon.ico?v=1">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon.ico?v=1">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon.ico?v=1">
     <!-- <link rel="manifest" href="/assets/favicons/site.webmanifest"> -->
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
@@ -63,7 +63,7 @@ const { description, title, preloadedImage } = Astro.props;
     <a class="skip" aria-label="skip to main content" href="#main">Click To Skip To Main Content</a>
 
     <Header />
-    <main id="main">
+    <main id="main" style="flex: 1;">
       <slot />
     </main>
     <Footer />
