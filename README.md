@@ -1,46 +1,62 @@
-# Astro Starter Kit: Basics
+# Maui Gift Outlet Landing Page
 
-```sh
-npm create astro@latest -- --template basics
+Single-page landing site for Maui Gift Outlet with "Coming Soon" hero section.
+
+## Tech Stack
+
+- Astro 5.12.3
+- LESS for styling
+- Vanilla JavaScript for mobile navigation
+
+## Structure
+
+```
+src/
+├── components/
+│   ├── Header.astro    # Fixed header with navigation and branding
+│   └── Footer.astro    # Footer with attribution
+├── layouts/
+│   └── BaseLayout.astro # Base layout with SEO meta tags
+├── pages/
+│   └── index.astro     # Hero section with wave dividers
+├── styles/
+│   └── root.less       # Global styles and CSS variables
+└── js/
+    └── nav.js          # Mobile menu toggle functionality
+
+public/assets/
+├── favicons/           # Site icons
+├── images/             # Store photo
+└── svgs/              # Turtle logo and wave decorations
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Key Features
 
-## 🚀 Project Structure
+- Responsive design (mobile-first)
+- Fixed header with mobile hamburger menu
+- Custom SVG wave dividers
+- Google fonts (Amatic SC, Roboto)
+- Dark mode support (framework included, not actively used)
+- SEO meta tags and Open Graph support
 
-Inside of your Astro project, you'll see the following folders and files:
+## Commands
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+```bash
+npm install          # Install dependencies
+npm run dev          # Start dev server (localhost:4321)
+npm run build        # Build for production
+npm run preview      # Preview production build
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Customization
 
-## 🧞 Commands
+Colors defined in `src/styles/root.less:10-17`:
+- Primary: #5CB3D4 (blue)
+- Secondary: #40BD37 (green)
+- Header: #1a1a1a (dark gray)
 
-All commands are run from the root of the project, from a terminal:
+## Notes
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- Google Maps link in hero button (index.astro:27)
+- Store info in header nav items (Header.astro:36-42)
+- Background image: `/public/assets/images/Store-photo.jpg`
